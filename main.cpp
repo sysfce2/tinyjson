@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <ostream>
 #include <stdlib.h>
 #include <streambuf>
 #include <string>
@@ -49,7 +50,7 @@ int main(int argc, char** argv)
 
     std::cout << "success" << std::endl;
     // std::stringstream ss;
-    std::ofstream ss(L"lexer.output.json", std::ios_base::binary | std::ios_base::out | std::ios_base::trunc);
+    std::ofstream ss("lexer.output.json", std::ios_base::binary | std::ios_base::out | std::ios_base::trunc);
     if (!ss.is_open()) {
         std::cerr << "failed to open output file" << std::endl;
         exit(1);
